@@ -23,6 +23,6 @@ while True:
     req = cli.recv(1024) #Contêm dados das requisições
 
     cli.send(b"HTTP/1.1 200 ok\r\n")
-    cli.send(b"Content-Type: application/json\r\n\r\n") #Envia header informando o tipo de conteudo.
+    cli.send(b"Content-Type: application/json\r\n\r\n") #Enviar header informando o tipo de conteúdo.
     cli.send(data.encode())
     cli.close()
